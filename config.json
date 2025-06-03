@@ -1,0 +1,147 @@
+{
+  "llm_config": {
+        "repetition_penalty": 1.15,
+        "do_sample": "True",
+        "temperature": 0.3,
+        "max_output": 2500,
+        "device_map": "cpu",
+        "low_cpu_mem_usage": "True"
+      },
+  "glm": {
+    "config": {
+      "model_name": "glm",
+      "prompt_wrapper": "glm_wrapper",
+      "display_name": "glm",
+      "model_repo_root": "/mnt/k/Models/glm/model",
+      "tokenizer": "/mnt/k/Models/glm/tokenizer",
+      "train_path": "/mnt/k/Models/glm/train",
+      "context_window": 1048576,
+      "training_datasets": "datasets"
+
+    }
+  },
+  "llama": {
+    "config": {
+      "model_name": "llama",
+      "prompt_wrapper": "llamaV2_wrapper",
+      "display_name": "llama",
+      "model_repo_root": "/mnt/k/Models/llama/model",
+      "tokenizer": "/mnt/k/Models/llama/tokenizer",
+      "train_path": "/mnt/k/Models/llama/train",
+      "context_window": 131072,
+      "training_datasets": "datasets"
+    }
+  },
+  "llama_train": {
+    "config": {
+      "model_name": "llama_train",
+      "prompt_wrapper": "llamaV2_wrapper",
+      "display_name": "llama_train",
+      "model_repo_root": "/mnt/k/Models/llama/train",
+      "tokenizer": "/mnt/k/Models/llama/tokenizer",
+      "train_path": "/mnt/k/Models/llama/train",
+      "context_window": 131072,
+      "training_datasets": "datasets"
+    }
+  },
+  "qwen": {
+    "config": {
+      "model_name": "qwen",
+      "prompt_wrapper": "qwen_wrapper",
+      "display_name": "qwen",
+      "model_repo_root": "/mnt/k/Models/qwen/model",
+      "tokenizer": "/mnt/k/Models/qwen/tokenizer",
+      "train_path": "/mnt/k/Models/qwen/train",
+      "context_window": 32768,
+      "training_datasets": "datasets"
+    }
+  },
+  "qwen_train": {
+    "config": {
+      "model_name": "qwen_train",
+      "prompt_wrapper": "qwen_wrapper",
+      "display_name": "qwen_train",
+      "model_repo_root": "/mnt/k/Models/qwen/train",
+      "tokenizer": "/mnt/k/Models/qwen/tokenizer",
+      "train_path": "/mnt/k/Models/qwen/train",
+      "context_window": 32768,
+      "training_datasets": "datasets"
+    }
+  },
+  "qwen1m": {
+    "config": {
+      "model_name": "qwen1m",
+      "prompt_wrapper": "qwen_wrapper",
+      "display_name": "qwen1m",
+      "model_repo_root": "/mnt/k/Models/qwen1m/model",
+      "tokenizer": "/mnt/k/Models/qwen1m/tokenizer",
+      "train_path": "/mnt/k/Models/qwen1m/train",
+      "context_window": 1010000,
+      "training_datasets": "datasets"
+
+    }
+  },
+
+  "qwen_old": {
+    "link": "https://huggingface.co/Qwen",
+    "original": {
+      "reasoning": "Qwen/Qwen2.5-3B-Instruct"
+    },
+    "local": {
+      "tokenizer": "model/qwen/qwen-model/tokenizer",
+      "base": "model/qwen/qwen-model/base",
+      "reasoning": "model/qwen/qwen-model/reasoning"
+    },
+    "config": {
+      "model_name": "qwen",
+      "prompt_wrapper": "qwen_wrapper",
+      "display_name": "qwen", "model_repo_root": "/mnt/k/Models/qwen_train/qwen_manuscript_tech_docs_example---generate_mcqs_tech_docs",
+      "context_window": 32768,
+      "llm_config": {
+        "repetition_penalty": 1.15,
+        "temperature": 0.3,
+        "max_output": 3000,
+        "device_map": "cpu",
+        "low_cpu_mem_usage": "True"
+      }
+      },
+      "training": {
+        "base_path": "/mnt/k/Models/qwen_train/",
+        "saved_checkpoint": [],
+      "training_datasets": "datasets"
+      }
+  },
+
+  "llama_old": {
+    "link": "https://huggingface.co/meta-llama",
+    "original": {
+      "reasoning": "meta-llama/Llama-3.2-3B-Instruct"
+    },
+    "local": {
+      "tokenizer": "model/llama/llama-model/tokenizer",
+      "base": "/mnt/k/Models/llama/models--meta-llama--Llama-3.2-3B-Instruct/snapshots/0cb88a4f764b7a12671c53f0838cd831a0843b95",
+      "reasoning": "model/llama/llama-model/reasoning"
+    },
+    "config": {
+      "model_name": "llama",
+      "prompt_wrapper": "llamaV2_wrapper",
+      "display_name": "llama",
+      "model_repo_root": "/mnt/k/Models/llama/models--meta-llama--Llama-3.2-3B-Instruct/snapshots/0cb88a4f764b7a12671c53f0838cd831a0843b95"
+
+,
+      "context_window": 131072,
+      "llm_config": {
+        "repetition_penalty": 1.15,
+        "temperature": 0.3,
+        "max_output": 2500,
+        "device_map": "cpu",
+        "low_cpu_mem_usage": "True"
+      }
+    },
+    "training": {
+      "base_path": "/mnt/k/Models/llama_train/",
+      "saved_checkpoint": [],
+      "training_datasets": "datasets"
+    }
+  }
+}

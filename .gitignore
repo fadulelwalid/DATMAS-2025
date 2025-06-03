@@ -1,0 +1,10 @@
+data*/
+venv*/
+postgres/pgdata/
+unused/
+accounts/
+.vscode/
+output/
+__pycache__/
+model/*/*-model/
+llmware_data/

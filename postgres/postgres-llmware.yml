@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  db:
+    hostname: db
+    image: ankane/pgvector
+    ports:
+     - 5432:5432
+    restart: always
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD="root"
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+     - ./pgdata:/var/lib/postgresql/data
+     - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  pgdata:
+    driver: local
