@@ -77,6 +77,8 @@ class Prompter:
         return response
     
     def package_query_from_lib(self, query: list):
+        for i in query:
+            i.update({"text": i["text_search"]})
         if self.text_only:
             filtered_q = []
             for i in query:
