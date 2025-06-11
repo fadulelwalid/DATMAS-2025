@@ -10,7 +10,7 @@ Another required dependency is docker. This is for the PostgreSQL database. Init
 ## 1.3 LibreOffice
 A document editor tool is necessary for proper extraction of vital document information. Therefore, due to LibreOffice is open source and tested with our setup, this it is the recommended document editor. Download the appropriate file from this link: https://www.libreoffice.org/download/download-libreoffice/
 ## 1.4 Model Download
-The model you want to use should be downloaded locally. Downloading of the models can be done using command from **1.6.3 Model Installation** in a python environment (after downloading all python dependencies).
+The model you want to use should be downloaded locally. Downloading of the models can be done using command from **1.6.3 Model Installation** in a python environment (after downloading all python dependencies). See documentation for the HuggingFace CLI for more information on how to download models: https://huggingface.co/docs/huggingface_hub/main/en/guides/cli.
 Our solution is tested with these specific HuggingFace models: 
 
 **Tested HuggingFace models:**
