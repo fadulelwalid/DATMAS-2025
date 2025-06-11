@@ -1,7 +1,3 @@
-#from prompter.pipeline import ModelPipeline
-from llmware.library import Library
-from library import LibraryManager
-from clean_data import Cleaner
 from pipeline import ModelPipeline
 
 def main():
@@ -33,25 +29,31 @@ def run_all():
         model.run_all()
         del model
 
+def run(modelname, path="master"):
+    path = "master"
+    model = ModelPipeline(modelname=modelname, main_path=path)
+    model.run_all()
+    del model
+
+def train(modelname, path="master"):
+    path = "master"
+    model = ModelPipeline(modelname=modelname, main_path=path)
+    model.run_training(generate=True)
+    del model
+
 
 if __name__ == "__main__":
 
     #train_all()
-    run_all()
+    #run_all()
 
+    path = "relative_path_of_root_directory"
 
-    path = "master"
-    #model = ModelPipeline(modelname="glm", main_path=path)
-    #model.run_all()
-
+    models = ["llama", "llama_train", "qwen", "qwen_train", "qwen1m"]
+    model = ""
     
-    #lib_manager = LibraryManager(Cleaner())
-
-    #model.run_training()
-    #model.run_training(generate=True)
-    #model.run_training(generate=True, dataset_fname="example_sys50_70_77")
-    #model.run_whole_loop()
-    #model.delete_libraries()
+    run(modelname=model, path=path)
+    train(modelname=model, path=path)
 
     # Changes done to llmware library
     # models.py - 11292, 7758, 11294, added "**kwargs"
